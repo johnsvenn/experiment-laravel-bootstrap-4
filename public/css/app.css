@@ -25,7 +25,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-sans-serif: "Raleway", sans-serif;
   --font-family-monospace: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -137,13 +137,13 @@ section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Raleway", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: red;
+  background-color: #f5f8fa;
 }
 
 [tabindex="-1"]:focus {
@@ -597,7 +597,7 @@ mark,
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: red;
+  background-color: #f5f8fa;
   border: 1px solid #ddd;
   border-radius: 0.25rem;
   -webkit-transition: all 0.2s ease-in-out;
@@ -745,6 +745,7 @@ pre code {
 .col-6,
 .col-7,
 .col-8,
+.col-md-8,
 .col-9,
 .col-10,
 .col-11,
@@ -772,7 +773,6 @@ pre code {
 .col-md-5,
 .col-md-6,
 .col-md-7,
-.col-md-8,
 .col-md-9,
 .col-md-10,
 .col-md-11,
@@ -880,7 +880,8 @@ pre code {
   max-width: 58.33333333%;
 }
 
-.col-8 {
+.col-8,
+.col-md-8 {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 66.66666667%;
           flex: 0 0 66.66666667%;
@@ -1454,7 +1455,8 @@ pre code {
     margin-left: 8.33333333%;
   }
 
-  .offset-md-2 {
+  .offset-md-2,
+  .col-md-offset-2 {
     margin-left: 16.66666667%;
   }
 
@@ -1977,7 +1979,7 @@ pre code {
 }
 
 .table .table {
-  background-color: red;
+  background-color: #f5f8fa;
 }
 
 .table-sm th,
@@ -2143,7 +2145,7 @@ pre code {
 }
 
 .table .thead-dark th {
-  color: red;
+  color: #f5f8fa;
   background-color: #212529;
   border-color: #32383e;
 }
@@ -2155,7 +2157,7 @@ pre code {
 }
 
 .table-dark {
-  color: red;
+  color: #f5f8fa;
   background-color: #212529;
 }
 
@@ -3909,8 +3911,8 @@ tbody.collapse.show {
 }
 
 .custom-control-input:focus ~ .custom-control-indicator {
-  -webkit-box-shadow: 0 0 0 1px red, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-          box-shadow: 0 0 0 1px red, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  -webkit-box-shadow: 0 0 0 1px #f5f8fa, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+          box-shadow: 0 0 0 1px #f5f8fa, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 .custom-control-input:active ~ .custom-control-indicator {
@@ -4149,8 +4151,8 @@ tbody.collapse.show {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #495057;
-  background-color: red;
-  border-color: #ddd #ddd red;
+  background-color: #f5f8fa;
+  border-color: #ddd #ddd #f5f8fa;
 }
 
 .nav-tabs .dropdown-menu {
@@ -4721,7 +4723,8 @@ tbody.collapse.show {
   color: #fff;
 }
 
-.card {
+.card,
+.panel {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4738,22 +4741,26 @@ tbody.collapse.show {
   border-radius: 0.25rem;
 }
 
-.card > hr {
+.card > hr,
+.panel > hr {
   margin-right: 0;
   margin-left: 0;
 }
 
-.card > .list-group:first-child .list-group-item:first-child {
+.card > .list-group:first-child .list-group-item:first-child,
+.panel > .list-group:first-child .list-group-item:first-child {
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
 
-.card > .list-group:last-child .list-group-item:last-child {
+.card > .list-group:last-child .list-group-item:last-child,
+.panel > .list-group:last-child .list-group-item:last-child {
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
 }
 
-.card-body {
+.card-body,
+.panel-body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -4781,18 +4788,21 @@ tbody.collapse.show {
   margin-left: 1.25rem;
 }
 
-.card-header {
+.card-header,
+.panel-heading {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-.card-header:first-child {
+.card-header:first-child,
+.panel-heading:first-child {
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
 }
 
-.card-header + .list-group .list-group-item:first-child {
+.card-header + .list-group .list-group-item:first-child,
+.panel-heading + .list-group .list-group-item:first-child {
   border-top: 0;
 }
 
@@ -4854,7 +4864,8 @@ tbody.collapse.show {
           flex-direction: column;
 }
 
-.card-deck .card {
+.card-deck .card,
+.card-deck .panel {
   margin-bottom: 15px;
 }
 
@@ -4868,7 +4879,8 @@ tbody.collapse.show {
     margin-left: -15px;
   }
 
-  .card-deck .card {
+  .card-deck .card,
+  .card-deck .panel {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4895,7 +4907,8 @@ tbody.collapse.show {
           flex-direction: column;
 }
 
-.card-group .card {
+.card-group .card,
+.card-group .panel {
   margin-bottom: 15px;
 }
 
@@ -4907,69 +4920,86 @@ tbody.collapse.show {
             flex-flow: row wrap;
   }
 
-  .card-group .card {
+  .card-group .card,
+  .card-group .panel {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 0%;
             flex: 1 0 0%;
     margin-bottom: 0;
   }
 
-  .card-group .card + .card {
+  .card-group .card + .card,
+  .card-group .panel + .card,
+  .card-group .card + .panel,
+  .card-group .panel + .panel {
     margin-left: 0;
     border-left: 0;
   }
 
-  .card-group .card:first-child {
+  .card-group .card:first-child,
+  .card-group .panel:first-child {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
 
-  .card-group .card:first-child .card-img-top {
+  .card-group .card:first-child .card-img-top,
+  .card-group .panel:first-child .card-img-top {
     border-top-right-radius: 0;
   }
 
-  .card-group .card:first-child .card-img-bottom {
+  .card-group .card:first-child .card-img-bottom,
+  .card-group .panel:first-child .card-img-bottom {
     border-bottom-right-radius: 0;
   }
 
-  .card-group .card:last-child {
+  .card-group .card:last-child,
+  .card-group .panel:last-child {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
 
-  .card-group .card:last-child .card-img-top {
+  .card-group .card:last-child .card-img-top,
+  .card-group .panel:last-child .card-img-top {
     border-top-left-radius: 0;
   }
 
-  .card-group .card:last-child .card-img-bottom {
+  .card-group .card:last-child .card-img-bottom,
+  .card-group .panel:last-child .card-img-bottom {
     border-bottom-left-radius: 0;
   }
 
-  .card-group .card:only-child {
+  .card-group .card:only-child,
+  .card-group .panel:only-child {
     border-radius: 0.25rem;
   }
 
-  .card-group .card:only-child .card-img-top {
+  .card-group .card:only-child .card-img-top,
+  .card-group .panel:only-child .card-img-top {
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
   }
 
-  .card-group .card:only-child .card-img-bottom {
+  .card-group .card:only-child .card-img-bottom,
+  .card-group .panel:only-child .card-img-bottom {
     border-bottom-right-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
   }
 
-  .card-group .card:not(:first-child):not(:last-child):not(:only-child) {
+  .card-group .card:not(:first-child):not(:last-child):not(:only-child),
+  .card-group .panel:not(:first-child):not(:last-child):not(:only-child) {
     border-radius: 0;
   }
 
   .card-group .card:not(:first-child):not(:last-child):not(:only-child) .card-img-top,
-  .card-group .card:not(:first-child):not(:last-child):not(:only-child) .card-img-bottom {
+  .card-group .panel:not(:first-child):not(:last-child):not(:only-child) .card-img-top,
+  .card-group .card:not(:first-child):not(:last-child):not(:only-child) .card-img-bottom,
+  .card-group .panel:not(:first-child):not(:last-child):not(:only-child) .card-img-bottom {
     border-radius: 0;
   }
 }
 
-.card-columns .card {
+.card-columns .card,
+.card-columns .panel {
   margin-bottom: 0.75rem;
 }
 
@@ -4981,7 +5011,8 @@ tbody.collapse.show {
             column-gap: 1.25rem;
   }
 
-  .card-columns .card {
+  .card-columns .card,
+  .card-columns .panel {
     display: inline-block;
     width: 100%;
   }
@@ -5922,7 +5953,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -6047,7 +6078,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -9708,5 +9739,19 @@ a.text-dark:hover {
 
 .invisible {
   visibility: hidden !important;
+}
+
+.navbar-default {
+  background-color: #fff;
+  border: 0px solid #d3e0e9;
+  border-bottom-width: 1px;
+}
+
+.navbar-light .navbar-brand {
+  color: #777;
+}
+
+main {
+  margin-top: 72px;
 }
 

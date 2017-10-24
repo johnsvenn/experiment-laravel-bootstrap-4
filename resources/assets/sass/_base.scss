@@ -1,0 +1,47 @@
+
+
+
+
+.navbar-default {
+	
+	background-color: #fff;
+    border: 0px solid $laravel-border-color;
+    border-bottom-width: 1px;
+}
+
+.navbar-light .navbar-brand  {
+	
+	color: #777;
+}
+
+.panel {
+	
+	@extend .card;
+	
+}
+
+.panel-heading {
+	
+	@extend .card-header;
+}
+
+.panel-body {
+	
+	@extend .card-body;
+}
+
+.col-md-8 {
+	
+	@extend .col-8;
+	
+}
+
+.col-md-offset-2 {
+	
+	@extend .offset-md-2;
+}
+
+main {
+	margin-top: 72px;
+	
+}
